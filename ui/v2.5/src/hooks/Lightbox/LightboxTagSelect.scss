@@ -1,0 +1,16 @@
+.lightbox-tags {
+  display: flex;
+  flex-direction: column;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  __save-button {
+    margin-left: auto;
+  }
+}
+
+

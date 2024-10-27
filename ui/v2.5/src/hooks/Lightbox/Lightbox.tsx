@@ -48,6 +48,7 @@ import {
 import { RatingSystem } from "src/components/Shared/Rating/RatingSystem";
 import { useDebounce } from "../debounce";
 import { isVideo } from "src/utils/visualFile";
+import { LightboxTagSelect } from "./LightboxTagSelect";
 
 const CLASSNAME = "Lightbox";
 const CLASSNAME_HEADER = `${CLASSNAME}-header`;
@@ -741,7 +742,10 @@ export const LightboxComponent: React.FC<IProps> = ({
     return (
       <>
         <div className={CLASSNAME_HEADER}>
-          <div className={CLASSNAME_LEFT_SPACER}>{renderChapterMenu()}</div>
+          <div className={CLASSNAME_LEFT_SPACER}>
+            {renderChapterMenu()}
+            { currentImage ? <LightboxTagSelect currentImage={currentImage}/> : null }
+          </div>
           <div className={CLASSNAME_INDICATOR}>
             <span>
               {chapterHeader()} {pageHeader}

@@ -1,3 +1,4 @@
+import { Tag } from "src/components/Tags/TagSelect";
 import * as GQL from "src/core/generated-graphql";
 
 interface IImagePaths {
@@ -20,6 +21,7 @@ export interface ILightboxImage {
   o_counter?: GQL.Maybe<number>;
   paths: IImagePaths;
   visual_files?: GQL.Maybe<IFiles>[];
+  tags?: GQL.Maybe<Tag[]>;
 }
 
 export interface IChapter {
